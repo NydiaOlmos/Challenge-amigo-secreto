@@ -27,7 +27,7 @@ function validarAmigo(){
         return false;
     }
     // Validamos que solo se ingresen letras
-    /*Desgloce de la expresión regular /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ-']+$/
+    /*Desgloce de la expresión regular /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ'\-]+$/
         ^: Inicio de la cadena
         a-z A-Z: Rango de letras minúsculas y mayúsculas
         áéíóúÁÉÍÓÚ: Vocales tildadas minúsculas y mayúsculas
@@ -42,7 +42,7 @@ function validarAmigo(){
         devuelve true si la cadena pasada como argumento (amigo) coincide con el patrón de la
         expresión regular, y false en caso contrario.
     */
-    if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ-']+$/.test(amigo)){ // Prueba si el nombre contiene solo caracteres válidos
+    if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ'\-]+$/.test(amigo)){ // Prueba si el nombre contiene solo caracteres válidos
         alert('El nombre solo puede contener letras');
         return false
     }

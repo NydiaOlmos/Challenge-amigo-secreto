@@ -2,7 +2,7 @@
 
 <h1>Challenge "Amigo Secreto"</h1>
 <p align="left">
- <img src="https://img.shields.io/badge/Status-En%20desarrollo-green">
+ <img src="https://img.shields.io/badge/Status-Finalizado-green">
  <img src="https://img.shields.io/badge/Release_date-March_2025-olive">
 </p>
 
@@ -24,6 +24,9 @@
     </li>
 </ul>
 
+
+<video src="https://github.com/user-attachments/assets/860cda5a-7e2f-4af2-a18d-cc33dadba7de" autoplay muted loop ></video>
+
 <h2 > :open_file_folder: Acceso al Proyecto</h2>
 <p>Puedes acceder al proyecto descargando todos los archivos de este repositorio y abriendo el index.html en un navegador web o puedes acceder a la página con el siguiente enlace: </p>
 <p align="center">
@@ -38,3 +41,10 @@
 </ul>
 
 <h2> :paw_prints: Desarrolladora del proyecto</h2>
+<p>
+ <img src="https://avatars.githubusercontent.com/u/111654273?v=4" width=100px>
+</p>
+
+<p>
+ <a href="https://github.com/NydiaOlmos">Nydia Olmos</a>
+</p>

@@ -1,5 +1,6 @@
 :root {
     --color-primary: #4B69FD;
+    --color-primary-hover: #3a57c4;
     --color-secondary: #FFF9EB;
     --color-tertiary: #C4C4C4;
     --color-button: #fe652b;
@@ -90,6 +91,8 @@ body {
 .button-container {
     width: 300px;
     justify-content: center;
+    margin-bottom: 1%;
+    align-content: center;
 }
 
 /* Estilos de entrada de texto */
@@ -159,4 +162,22 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+.button-refresh {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    font-size: 16px;
+}
+
+.button-refresh img {
+    margin-right: 40px;
+}
+
+.button-refresh:hover {
+    background-color: var(--color-primary-hover);
 }

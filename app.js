@@ -1,7 +1,8 @@
 let amigos = [];
 let amigosInput = document.getElementById('amigo');
 let impresionResultado = document.getElementById('resultado');
-let botonSorteo = document.getElementsByClassName('button-draw')[0];
+// Retorna un array con los elementos que tengan la clase button-draw, por eso se accede al primer elemento
+let botonSorteo = document.getElementsByClassName('button-draw')[0]; 
 impresionResultado.innerHTML = '';
 amigosInput.focus();
 
@@ -16,6 +17,7 @@ function validarAmigo(){
         alert('Este amigo ya fue agregado');
         return false;
     }
+    // Validaciones de longitud
     if (amigo.length < 3){
         alert('El nombre debe tener al menos 3 caracteres');
         return false;
@@ -24,9 +26,20 @@ function validarAmigo(){
         alert('El nombre no puede tener más de 20 caracteres');
         return false;
     }
-    if (!isNaN(amigo)){
-        alert('El nombre no puede ser un número');
-        return false;
+    // Validamos que solo se ingresen letras
+    /*Desgloce de la expresión regular /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ-']+$/
+        ^: Inicio de la cadena
+        a-z A-Z: Rango de letras minúsculas y mayúsculas
+        áéíóúÁÉÍÓÚ: Vocales tildadas minúsculas y mayúsculas
+        ñÑ: Letras ñ y Ñ
+        üÜ: Letras ü y Ü
+        -': Guion y comilla simple
+        +: Uno o más caracteres
+        $: Fin de la cadena
+    */
+    if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ-']+$/.test(amigo)){ // Prueba si el nombre contiene solo caracteres válidos
+        alert('El nombre solo puede contener letras');
+        return false
     }
     return true;
 }
@@ -35,16 +48,15 @@ function mostrarAmigos(){
     let listaAmigos = document.getElementById('listaAmigos');
     listaAmigos.innerHTML = '';
     amigos.forEach((amigo) => {
-        let li = document.createElement('li');
-        li.textContent = amigo;
-        listaAmigos.appendChild(li);
+        let li = document.createElement('li'); // Crea un elemento li
+        li.textContent = amigo; // Agrega el nombre del amigo al elemento li al final de la lista
     });
     return;
 }
 
 function agregarAmigo(){
     if(validarAmigo()){
-        amigos.push(amigosInput.value);
+        amigos.push(amigosInput.value); // Agrega el nombre del amigo al array amigos si es válido
         amigosInput.value = '';
         amigosInput.focus();
         mostrarAmigos();
@@ -53,20 +65,22 @@ function agregarAmigo(){
 }
 
 function sortearAmigo(){
-    if(amigos.length < 2){
+    if(amigos.length < 2){ // Si hay menos de 2 amigos, no se puede realizar el sorteo
         alert('Debes agregar al menos 2 amigos');
-        return;
+        return; // Sale de la función
     }
-    let amigoSorteado = amigos[Math.floor(Math.random() * amigos.length)];
+    let amigoSorteado = amigos[Math.floor(Math.random() * amigos.length)]; // Selecciona el nombre al azar
     impresionResultado.innerHTML = `El amigo secreto es: ${amigoSorteado}`;
+    // Cambia el texto del botón
     botonSorteo.innerHTML = '<img src="assets/play_circle_outline.png" alt="Ícono para sortear">Sortear otro amigo';
     return;
 }
 
 function reiniciarLista(){
-    amigos = [];
-    mostrarAmigos();
+    amigos = []; // Limpia la lista de amigos
+    mostrarAmigos();// Limpia la lista de amigos en pantalla
     impresionResultado.innerHTML = '';
+    // Regresa el texto original del botón
     botonSorteo.innerHTML = '<img src="assets/play_circle_outline.png" alt="Ícono para sortear">Sortear amigo';
     return;
 }

@@ -37,6 +37,11 @@ function validarAmigo(){
         +: Uno o más caracteres
         $: Fin de la cadena
     */
+    /*
+        El método .test() es una función de las expresiones regulares en JavaScript que
+        devuelve true si la cadena pasada como argumento (amigo) coincide con el patrón de la
+        expresión regular, y false en caso contrario.
+    */
     if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ-']+$/.test(amigo)){ // Prueba si el nombre contiene solo caracteres válidos
         alert('El nombre solo puede contener letras');
         return false

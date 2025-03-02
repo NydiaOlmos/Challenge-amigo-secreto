@@ -24,8 +24,8 @@
     </li>
 </ul>
 
+![AmigoSecreto](https://github.com/user-attachments/assets/204ab8dd-85c9-4a01-9b99-a5a42ad3e118)
 
-<video src="https://github.com/user-attachments/assets/860cda5a-7e2f-4af2-a18d-cc33dadba7de" autoplay muted loop ></video>
 
 <h2 > :open_file_folder: Acceso al Proyecto</h2>
 <p>Puedes acceder al proyecto descargando todos los archivos de este repositorio y abriendo el index.html en un navegador web o puedes acceder a la página con el siguiente enlace: </p>

@@ -1,6 +1,7 @@
 let amigos = [];
 let amigosInput = document.getElementById('amigo');
 let impresionResultado = document.getElementById('resultado');
+let botonSorteo = document.getElementsByClassName('button-draw')[0];
 impresionResultado.innerHTML = '';
 amigosInput.focus();
 
@@ -58,6 +59,7 @@ function sortearAmigo(){
     }
     let amigoSorteado = amigos[Math.floor(Math.random() * amigos.length)];
     impresionResultado.innerHTML = `El amigo secreto es: ${amigoSorteado}`;
+    botonSorteo.innerHTML = '<img src="assets/play_circle_outline.png" alt="Ícono para sortear">Sortear otro amigo';
     return;
 }
 
@@ -65,5 +67,6 @@ function reiniciarLista(){
     amigos = [];
     mostrarAmigos();
     impresionResultado.innerHTML = '';
+    botonSorteo.innerHTML = '<img src="assets/play_circle_outline.png" alt="Ícono para sortear">Sortear amigo';
     return;
 }

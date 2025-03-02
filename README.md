@@ -30,7 +30,7 @@
 <h2 > :open_file_folder: Acceso al Proyecto</h2>
 <p>Puedes acceder al proyecto descargando todos los archivos de este repositorio y abriendo el index.html en un navegador web o puedes acceder a la página con el siguiente enlace: </p>
 <p align="center">
-    <a href="">Amigo Secreto</a>
+    <a href="https://nydiaolmos.github.io/Challenge-amigo-secreto/">Amigo Secreto</a>
 </p>
 
 <h2> :computer: Tecnologías utilizadas</h2>

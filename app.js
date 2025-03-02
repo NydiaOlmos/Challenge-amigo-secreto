@@ -18,8 +18,8 @@ function validarAmigo(){
         return false;
     }
     // Validaciones de longitud
-    if (amigo.length < 3){
-        alert('El nombre debe tener al menos 3 caracteres');
+    if (amigo.length < 2){
+        alert('El nombre debe tener al menos 2 caracteres');
         return false;
     }
     if (amigo.length > 20){
@@ -55,6 +55,7 @@ function mostrarAmigos(){
     amigos.forEach((amigo) => {
         let li = document.createElement('li'); // Crea un elemento li
         li.textContent = amigo; // Agrega el nombre del amigo al elemento li al final de la lista
+        listaAmigos.appendChild(li); // Agrega el elemento li a la lista de amigos
     });
     return;
 }
